@@ -39,14 +39,6 @@ class MelhorEnvioBaseClient {
         this.lastRequest = { ...options, data: body };
 
         if (body) {
-            if (body.creditCard) {
-                body.creditCard = '[hidden]';
-            }
-
-            if (body.creditCardHolderInfo) {
-                body.creditCardHolderInfo = '[hidden]';
-            }
-
             this.lastRequest.body = body;
         }
 
